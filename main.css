@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #D6C1FF; /* optional just for looks */
+}
+
+.item {
+    width: 50%; /* adjust how wide you want it */
+    border-radius: 12px;
+}
