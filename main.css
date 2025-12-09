@@ -18,15 +18,15 @@ body {
 /* Phones & small screens */
 @media (max-width: 768px) {
     .item {
-        width: 90vw;
-        height: 300px;
+        width: 98vw;
+        height: 400px;
     }
 }
 
 @media (max-width: 480px) {
     .item {
-        width: 95vw;
-        height: 260px;
+        width: 98vw;
+        height: 400px;
     }
 }
 
