@@ -4,11 +4,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: #5f4e88; /* optional just for looks */
+    min-height: 100vh;
+    background: #5f4e88; /* or your pastel background */
 }
 
+/* Desktop default */
 .item {
-    width: 50%; /* adjust how wide you want it */
+    width: 50vw;
+    height: 450px;
     border-radius: 12px;
 }
+
+/* Phones & small screens */
+@media (max-width: 768px) {
+    .item {
+        width: 90vw;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        width: 95vw;
+        height: 260px;
+    }
+}
+
