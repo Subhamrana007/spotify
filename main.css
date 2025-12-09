@@ -1,12 +1,26 @@
 body {
+    background-image: url(./img/Reze\ \(Chainsaw\ Man\).jpeg);
+    background-size: cover;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #5f4e88; /* or your pastel background */
+    /* background: #5f4e88; or your pastel background */
 }
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 20, 30, 0.75);  /* dark transparent layer */
+    backdrop-filter: blur(15px);         /* heavy blur */
+    -webkit-backdrop-filter: blur(15px);
+    z-index: -1;
+}
+
+
+
 
 /* Desktop default */
 .item {
