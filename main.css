@@ -1,42 +1,63 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+/* Body background */
 body {
     margin: 0;
+    padding: 0;
     min-height: 100vh;
+
+    background-image: url("./img/reze.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(img/reze.jpeg) center / cover no-repeat;
 }
 
-/* blurred background layer */
-.bg {
+/* Blur overlay */
+body::before {
+    content: "";
     position: fixed;
     inset: 0;
-    background: inherit;
-    filter: blur(45px);
-    transform: scale(1.1);
-    z-index: -2;
+
+    background: rgba(20, 20, 30, 0.55); /* MUST be transparent */
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+
+    z-index: 0;
 }
 
-/* dark tint */
-.bg::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(20, 20, 30, 0.6);
-}
-
-/* glass container — NO blur here */
-.glass {
-    background: rgba(30, 30, 40, 0.6);
-    border-radius: 14px;
-    padding: 12px;
-    box-shadow: 0 20px 60px rgba(0,0,0,.4);
-}
-
-/* iframe untouched */
+/* Your glass card */
 .item {
+    position: relative;
+    z-index: 1; /* ABOVE blur layer */
+
     width: 50vw;
     height: 450px;
+
+    background: rgba(15, 15, 15, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
     border-radius: 12px;
-    border: none;
+}
+
+/* Phones & small screens */
+@media (max-width: 768px) {
+    .item {
+        width: 98vw;
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        width: 98vw;
+        height: 400px;
+    }
 }
