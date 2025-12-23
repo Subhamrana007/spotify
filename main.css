@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* background: #5f4e88; or your pastel background */
+
 }
 body::before {
     content: "";
